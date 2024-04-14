@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
+
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -14,35 +15,67 @@ import { DialogModule } from '@angular/cdk/dialog';
 import {MatMenuModule} from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
+
+import { MovieCardComponent } from './movie-card/movie-card.component';
+import { UserLoginFormComponent } from './user-login-form/user-login-form.component';
 import { AppComponent } from './app.component';
 import { UserRegistrationFormComponent } from './user-registration-form/user-registration-form.component';
-import { UserLoginFormComponent } from './user-login-form/user-login-form.component';
-import { MovieCardComponent } from './movie-card/movie-card.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { ProfileComponent } from './profile-view/profile-view.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { GenreComponent } from './genre/genre.component';
+import { DirectorComponent } from './director/director.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
+
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
   { path: 'movies', component: MovieCardComponent },
+  { path: 'profile', component: ProfileComponent},
   { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
 ];
 
 @NgModule({
   declarations: [
+    /** @component AppComponent */
     AppComponent,
+
+    /** @component UserRegistrationFormComponent */
     UserRegistrationFormComponent,
+
+    /** @component UserLoginFormComponent */
     UserLoginFormComponent,
+
+    /** @component MovieCardComponent */
     MovieCardComponent,
+
+    /** @component WelcomePageComponent */
     WelcomePageComponent,
+
+    /** @component ProfileComponent */
+    ProfileComponent,
+
+    /** @component NavbarComponent */
+    NavbarComponent,
+
+    /** @component GenreComponent */
+    GenreComponent,
+
+    /** @component DirectorComponent */
+    DirectorComponent,
+
+    /** @component MovieDetailsComponent */
+    MovieDetailsComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
-    
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
+    AppRoutingModule,
     DialogModule,
+    FormsModule,
     MatIconModule,
     BrowserAnimationsModule,
     MatDialogModule,
@@ -53,7 +86,6 @@ const appRoutes: Routes = [
     MatSnackBarModule,
     MatIconModule,
     MatMenuModule,
-    FormsModule,
     MatListModule,
     MatToolbarModule
   ],
