@@ -1,3 +1,9 @@
+.profile {
+    background-color: rgb(61, 58, 58);
+    text-align: center;
+    color: rgb(221, 8, 43);
+}
+
 .movie-page {
     background-color: rgb(61, 58, 58);
 }
@@ -16,11 +22,11 @@
 .movie-card {
     padding: 10px;
     flex: 1 0 calc(70vw - 20px);
-        /* berücksichtigt den Padding in der Breite */
-        max-width: calc(70vw - 20px);
-        /* berücksichtigt den Padding in der Breite */
-        margin: 15px;
-        /* Abstand zwischen den Karten */
+    /* berücksichtigt den Padding in der Breite */
+    max-width: calc(70vw - 20px);
+    /* berücksichtigt den Padding in der Breite */
+    margin: 15px;
+    /* Abstand zwischen den Karten */
 }
 
 .movie-card>img {
@@ -31,6 +37,10 @@
     display: block;
 }
 
+h1 {
+    text-align: center;
+    color: rgb(221, 8, 43);
+}
 
 mat-card-header {
     overflow: hidden !important;
