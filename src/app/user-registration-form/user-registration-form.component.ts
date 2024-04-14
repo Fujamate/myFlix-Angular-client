@@ -26,7 +26,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class UserRegistrationFormComponent implements OnInit {
 
-  @Input() userData : any= { Username: '', Password: '', Email: '', Birth: '' };
+  @Input() userData : any= { Username: '', Password: '', Email: '', Birthday: '' };
 
   token : any = localStorage.getItem('token');
 
