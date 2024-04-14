@@ -4,9 +4,9 @@ import { FetchApiDataService } from '../fetch-api-data.service';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-/* import { GenreComponent } from '../genre/genre.component';
+import { GenreComponent } from '../genre/genre.component';
 import { DirectorComponent } from '../director/director.component';
-import { MovieDetailsComponent } from '../movie-details/movie-details.component'; */
+import { MovieDetailsComponent } from '../movie-details/movie-details.component';
 
 /**
  * @description Component representing the movie card.
@@ -135,9 +135,9 @@ getAllMovies(): void {
    * @returns genres name and details
    * */
 
-  /* public getGenre(genre: any){
+  public getGenre(genre: any){
     this.dialog.open(GenreComponent, { width: '400px', height: '300px', data: {genre: genre}});
-  } */
+  }
 
   /** 
  * Open director information from DirectorComponent
@@ -145,17 +145,17 @@ getAllMovies(): void {
  * @returns director name, bio, birth
  * */
 
-  /* public getOneDirector(director: any){
+  public getOneDirector(director: any){
     this.dialog.open(DirectorComponent, { width: '400px', height: '300px', data: {director: director}});
-  }   */
+  }  
 
   /** Open movie description from MovieDetailsComponent
  * @param details
  * @returns movie Title, Description
  * */
 
-  /* public openMovieDetails(details: string){
+  public openMovieDetails(details: string){
     this.dialog.open(MovieDetailsComponent, { width: '400px', height: '300px', data: {details: details}});
-  } */
+  }
 
 }
