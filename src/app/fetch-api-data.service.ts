@@ -18,7 +18,7 @@ const apiUrl = 'https://myflixx-by-kevin-holscher.onrender.com/';
 
 export class FetchApiDataService { 
 
-  private userData = new BehaviorSubject<Object>({ Username: '', Password: '', Email: '', Birth: ''});
+  private userData = new BehaviorSubject<Object>({ Username: '', Password: '', Email: '', Birthday: ''});
   currentUser = this.userData.asObservable();
 
   private movies = new BehaviorSubject<Object>({});
